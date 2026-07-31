@@ -50,7 +50,7 @@
 
                 <div class="grid grid-cols-3 gap-2.5">
                     <!-- IT Admin -->
-                    <button type="button" wire:click="fillAccount('admin@it.local')" class="neu-flat-sm p-3 text-center flex flex-col items-center justify-between hover:scale-[1.02] transition-all">
+                    <button type="button" wire:click="fillAccount('admin@it.local')" @click="$wire.email = 'admin@it.local'; $wire.password = 'password'" class="neu-flat-sm p-3 text-center flex flex-col items-center justify-between hover:scale-[1.02] transition-all cursor-pointer">
                         <div class="w-8 h-8 neu-pressed rounded-xl flex items-center justify-center text-sm mb-1.5 shrink-0">
                             👑
                         </div>
@@ -66,7 +66,7 @@
                     </button>
 
                     <!-- Technician -->
-                    <button type="button" wire:click="fillAccount('budi@it.local')" class="neu-flat-sm p-3 text-center flex flex-col items-center justify-between hover:scale-[1.02] transition-all">
+                    <button type="button" wire:click="fillAccount('budi@it.local')" @click="$wire.email = 'budi@it.local'; $wire.password = 'password'" class="neu-flat-sm p-3 text-center flex flex-col items-center justify-between hover:scale-[1.02] transition-all cursor-pointer">
                         <div class="w-8 h-8 neu-pressed rounded-xl flex items-center justify-center text-sm mb-1.5 shrink-0">
                             🛠️
                         </div>
@@ -82,7 +82,7 @@
                     </button>
 
                     <!-- User -->
-                    <button type="button" wire:click="fillAccount('andri@company.com')" class="neu-flat-sm p-3 text-center flex flex-col items-center justify-between hover:scale-[1.02] transition-all">
+                    <button type="button" wire:click="fillAccount('andri@company.com')" @click="$wire.email = 'andri@company.com'; $wire.password = 'password'" class="neu-flat-sm p-3 text-center flex flex-col items-center justify-between hover:scale-[1.02] transition-all cursor-pointer">
                         <div class="w-8 h-8 neu-pressed rounded-xl flex items-center justify-center text-sm mb-1.5 shrink-0">
                             👤
                         </div>
