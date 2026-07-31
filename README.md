@@ -1,59 +1,124 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Komando Helpdesk IT - Internal IT Ticket Dashboard
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi Manajemen Tiket Support IT Internal modern berbasis web yang dibangun menggunakan **Laravel 11**, **Livewire 3**, dan **Tailwind CSS** dengan desain **3D Soft Neumorphism (Soft UI Emboss & Pressed)**, skema warna **Dark/Light Mode**, **Multi-Bahasa (Indonesia & English)**, dan **Role-Based Access Control (RBAC)**.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🔗 Link & Repositori
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Website Live (Vercel)**: [https://internal-it-ticket-dashboard.vercel.app](https://internal-it-ticket-dashboard.vercel.app)
+- **Repositori GitHub**: [https://github.com/mpermana7/Internal_IT_Ticker_Dashboard](https://github.com/mpermana7/Internal_IT_Ticker_Dashboard)
+- **Dokumentasi Google Docs**: [https://docs.google.com/document/d/1Bx76BaTsnD8fYwXAon_NmqTxiCQ5IxjHg9VQdQFEA2E/edit](https://docs.google.com/document/d/1Bx76BaTsnD8fYwXAon_NmqTxiCQ5IxjHg9VQdQFEA2E/edit)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📌 1. Ringkasan Proyek (Project Overview)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+**Komando Helpdesk IT** adalah sistem dashboard tiket IT internal yang dirancang untuk mempermudah pelaporan masalah teknis pengguna, penugasan tiket ke teknisi IT, pemantauan status tiket secara real-time, dan pengorganisasian kategori layanan IT.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Keunggulan Utama:
+- **Desain UI Premium 3D Neumorphism**: Tampilan modern dengan efek bayangan Soft Emboss, Inner Pressed, dan animasi mikro yang responsif.
+- **Dukungan Skema Warna Ganda**: Toggle cepat untuk mode tampilan **Gelap (Dark Mode)** dan **Terang (Light Mode)**.
+- **Multi-Bahasa (Multi-Language)**: Dukungan penuh untuk **Bahasa Indonesia (ID)** dan **English (EN)**.
+- **Role-Based Access Control (RBAC)**: Membedakan secara tegas hak akses antara **Admin**, **Teknisi**, dan **User**.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🛠️ 2. Teknologi yang Digunakan (Technologies Used)
 
-### Premium Partners
+- **Backend Framework**: Laravel 11 (PHP 8.2+)
+- **Frontend Interaktif (SPA)**: Livewire 3 (Reaktivitas tanpa reload halaman)
+- **Styling & Layout**: Tailwind CSS 3 dengan Kustomisasi CSS Neumorphic Shadows
+- **Database Engine**:
+  - **Lokal**: MySQL / MariaDB (XAMPP)
+  - **Production (Vercel)**: SQLite Serverless Database (`/tmp/database.sqlite`)
+- **Autentikasi & Otorisasi**: Laravel Auth & Policy (Role Guards: Admin, Technician, User)
+- **Build Tool**: Vite 6
+- **Deployment**: Vercel Serverless PHP Engine (`vercel-php@0.7.3`) & GitHub Auto-Sync
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## ⚡ 3. Fitur yang Diimplementasikan (Features Implemented)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### A. Role-Based Access Control (RBAC)
+1. 👑 **Role Admin**:
+   - Memiliki akses penuh untuk membuat, mengedit, menugaskan teknisi, menguji status, dan menghapus tiket.
+   - Mengelola Kategori Layanan IT (Tambah, Edit, Hapus).
+   - Memantau ringkasan metriks statistik secara keseluruhan.
+2. 🛠️ **Role Teknisi / Staff IT**:
+   - Mengakses tiket yang khusus ditugaskan kepadanya.
+   - Mengubah status tiket (*Terbuka*, *Sedang Diproses*, *Selesai*, *Ditutup*).
+   - Modal edit tiket bersifat *read-only* untuk menjaga integritas data masalah.
+   - Dapat menambahkan Catatan Internal IT pada tiket.
+3. 👤 **Role User / Pemohon**:
+   - Membuat tiket bantuan IT (Identitas pemohon terisi otomatis sesuai akun yang login).
+   - Memantau tiket milik sendiri secara real-time.
+   - Menambahkan catatan/komentar pada detail tiket miliknya.
 
-## Code of Conduct
+### B. Metriks Dashboard Real-Time
+- 4 Card Metriks Utama (Total Tiket, Tiket Terbuka, Tiket Diproses, dan Tiket Prioritas Tinggi) yang terhitung secara dinamis sesuai scope role pengguna.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### C. Pencarian, Filtering, & Pengurutan Dinamis
+- Search bar instan untuk mencari nomor tiket, judul, atau deskripsi.
+- Filter kustom berdasarkan Status, Prioritas, dan Kategori Layanan.
+- Sorting dinamis berdasarkan tanggal dibuat atau tanggal diperbarui.
 
-## Security Vulnerabilities
+### D. Multi-Bahasa & Dark Mode
+- Pengubah bahasa instan ID / EN di header atas.
+- Mode tampilan Dark/Light yang konsisten di seluruh halaman aplikasi.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### E. Instant Demo Quick Login
+- Tombol 1-klik untuk login cepat sebagai **IT Admin**, **Technician**, atau **User** pada halaman login.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🚀 4. Instruksi Pengaturan/Instalasi (Setup Instructions)
+
+### Persyaratan Sistem
+- PHP >= 8.2
+- Composer >= 2.x
+- Node.js >= 18.x & NPM
+- MySQL / MariaDB (XAMPP)
+
+### Langkah Instalasi Lokal
+1. **Clone Repository**:
+   ```bash
+   git clone https://github.com/mpermana7/Internal_IT_Ticker_Dashboard.git
+   cd Internal_IT_Ticker_Dashboard
+   ```
+2. **Instal Dependensi**:
+   ```bash
+   composer install
+   npm install
+   ```
+3. **Konfigurasi File Environment**:
+   Salin `.env.example` menjadi `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+   Atur koneksi MySQL pada `.env`:
+   ```ini
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=internal_it_ticket_dashboard
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+4. **Generate Application Key**:
+   ```bash
+   php artisan key:generate
+   ```
+5. **Migrasi Database & Seeding Data**:
+   ```bash
+   php artisan migrate:fresh --seed
+   ```
+6. **Jalankan Aplikasi**:
+   - Terminal 1: `npm run dev`
+   - Terminal 2: `php artisan serve`
+   - Buka di browser: `http://127.0.0.1:8000`
+
+### Akun Demo Bawaan (Default Seeded Accounts)
+- 👑 **IT Admin**: `admin@it.local` | Password: `password`
+- 🛠️ **Technician**: `budi@it.local` | Password: `password`
+- 👤 **User**: `andri@company.com` | Password: `password`
