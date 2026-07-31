@@ -20,6 +20,8 @@
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "true",
+    "APP_URL": "https://internal-it-ticket-dashboard.vercel.app",
+    "ASSET_URL": "https://internal-it-ticket-dashboard.vercel.app",
     "APP_KEY": "base64:gpfFKUwK6mdvO2JwwtZmBIkOWrCct8Gl0vsdy51azyM=",
     "DB_CONNECTION": "sqlite",
     "DB_DATABASE": "/tmp/database.sqlite",
